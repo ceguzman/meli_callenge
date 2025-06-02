@@ -1,3 +1,5 @@
+SET search_path TO public;
+
 -- Tabla de roles del sistema (ej: 'vendedor', 'comprador')
 CREATE TABLE rol (
   id SERIAL PRIMARY KEY,
@@ -79,7 +81,7 @@ CREATE TABLE product (
   description VARCHAR(255) NOT NULL,
   brand VARCHAR(100) NOT NULL,
   model VARCHAR(255) NOT NULL,
-  state_condition VARCHAR(255) NOT NULL UNIQUE,
+  state_condition VARCHAR(255) NOT NULL,
   category_id INT NOT NULL REFERENCES category(id)
 );
 
