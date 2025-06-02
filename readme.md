@@ -1,6 +1,11 @@
+# Modelo Entidad Relacion
+
+![alt text](image.png)
+
+
 ## 1. Descargar Imagen PostgreSQL:
 
-
+`docker pull postgres:13`
 
 ## 2. Iniciar un contenedor de PostgreSQL:
 
@@ -15,5 +20,7 @@
 `-d postgres`: Ejecuta el contenedor en segundo plano usando la imagen oficial de PostgreSQL.
 
 ``` bash
-docker run --name postgreSQL -e POSTGRES_PASSWORD=secret_password -e POSTGRES_DB=meli_challenge_bd -p 5432:5432 -d postgres
+docker run --name postgreSQL -e POSTGRES_PASSWORD=secret_password -e POSTGRES_DB=meli_challenge_bd -p 5432:5432 -d postgres:13
 ```
+
+## 3. Iniciar un contenedor de PostgreSQL:
