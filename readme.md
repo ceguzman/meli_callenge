@@ -2,8 +2,6 @@
 
 ![image](https://github.com/user-attachments/assets/a61665c9-ef70-4cf2-bb32-0385a2c5f236)
 
-
-
 ## 1. Descargar Imagen PostgreSQL:
 
 `docker pull postgres:13`

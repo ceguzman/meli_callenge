@@ -103,7 +103,7 @@ CREATE TABLE item (
 -- Órdenes de compra (una por cada ítem comprado)
 CREATE TABLE "order" (
   id SERIAL PRIMARY KEY,
-  order_date INT NOT NULL,
+  order_date TIMESTAMP NOT NULL,
   total_amount NUMERIC(34, 6) NOT NULL,
   status VARCHAR(20) NOT NULL,
   currency VARCHAR(10) NOT NULL,

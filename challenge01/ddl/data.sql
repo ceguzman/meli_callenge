@@ -37,14 +37,14 @@ INSERT INTO customer (
 ) VALUES
 (1, 'Carlos', 'Gómez', 'Andrés', 'Pérez', '1023456789', '1990-05-12', '3101234567', 'carlos1@mail.com', 'ACTIVE', now(), 1, 1, 1),
 (2, 'María', 'Rodríguez', 'Isabel', 'Lopez', '1123456780', '1988-10-25', '3001234568', 'maria2@mail.com', 'ACTIVE', now(), 1, 2, 2),
-(3, 'Andrés', 'Martínez', 'Julián', 'Ramírez', '1223456781', '1985-07-19', '3111234569', 'andres3@mail.com', 'ACTIVE', now(), 1, 1, 3),
+(3, 'Andrés', 'Martínez', 'Julián', 'Ramírez', '1223456781', '1985-02-06', '3111234569', 'andres3@mail.com', 'ACTIVE', now(), 1, 1, 3),
 (4, 'Laura', 'Fernández', 'Carolina', 'Mendoza', '1323456782', '1992-03-03', '3021234570', 'laura4@mail.com', 'ACTIVE', now(), 1, 2, 4),
 (5, 'Pedro', 'Suárez', 'Esteban', 'García', '1423456783', '1979-12-30', '3131234571', 'pedro5@mail.com', 'ACTIVE', now(), 1, 1, 5),
 (6, 'Ana', 'López', 'Marcela', 'Gómez', '1523456784', '1995-09-09', '3041234572', 'ana6@mail.com', 'ACTIVE', now(), 1, 2, 6),
 (7, 'Jorge', 'Ramos', 'Iván', 'Díaz', '1623456785', '1983-01-01', '3151234573', 'jorge7@mail.com', 'ACTIVE', now(), 1, 1, 7),
 (8, 'Camila', 'Nieto', 'Juliana', 'Torres', '1723456786', '1991-04-14', '3161234574', 'camila8@mail.com', 'ACTIVE', now(), 1, 2, 8),
-(9, 'Daniel', 'Morales', 'David', 'Vargas', '1823456787', '1986-11-20', '3171234575', 'daniel9@mail.com', 'ACTIVE', now(), 1, 1, 9),
-(10, 'Paula', 'Castaño', 'Luisa', 'Soto', '1923456788', '1993-06-06', '3181234576', 'paula10@mail.com', 'ACTIVE', now(), 1, 2, 10);
+(9, 'Daniel', 'Morales', 'David', 'Vargas', '1823456787', '1986-02-06', '3171234575', 'daniel9@mail.com', 'ACTIVE', now(), 1, 1, 9),
+(10, 'Paula', 'Castaño', 'Luisa', 'Soto', '1923456788', '1993-02-06', '3181234576', 'paula10@mail.com', 'ACTIVE', now(), 1, 2, 10);
 
 
 INSERT INTO rol (id, rol) VALUES
@@ -83,7 +83,7 @@ INSERT INTO item (id, price, currency, stock, publish_date, deactivation_date, l
 (5, 1323.49, 'COP', 43, '2020-01-10 08:00:00', NULL, '2020-01-10 08:00:00', 0, 'ACTIVE', 5, 10);
 
 INSERT INTO "order" (id, order_date, total_amount, status, currency, buyer_id) VALUES
-(1, 20200115, 2419.00, 'CONFIRMED', 'COP', 1);
+(1, 20200115, 2419.00, 'CONFIRMED', 'COP', 10);
 
 INSERT INTO item_order (order_id, item_id, quantity, unit_price) VALUES
 (1, 1, 2, 1209.50);
