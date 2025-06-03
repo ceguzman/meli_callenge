@@ -69,3 +69,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 SELECT generate_item_snapshot('2020-01-31');
+
+SELECT *
+FROM item_snapshot
+WHERE snapshot_date = '2020-01-10';
