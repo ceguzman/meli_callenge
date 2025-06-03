@@ -2,7 +2,8 @@
 
 __1. MER:__
 
-![image](https://github.com/user-attachments/assets/a61665c9-ef70-4cf2-bb32-0385a2c5f236)
+![EntityRelationshipDiagram1](https://github.com/user-attachments/assets/bd5c484e-ff19-4f93-8d9f-46ba9bba530b)
+
 ___
 
 __2. Respuestas de negocio:__
