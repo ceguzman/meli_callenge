@@ -24,6 +24,27 @@ ___
 
 __notas__:
 
+_Estructura del proyecto:_
+
+```
+├── challenge01
+│   ├── Dockerfile
+│   ├── ddl
+│   │   ├── create_tables.sql
+│   │   └── data.sql
+│   ├── dml
+│   │   └── respuestas_negocio.sql
+│   └── run.sh
+├── images
+│   ├── EntityRelationshipDiagram.jpg
+│   ├── respuesta_negocio01.png
+│   ├── respuesta_negocio02.png
+│   └── respuesta_negocio03.png
+└── readme.md
+```
+
+_Explicación basica de comandos docker utilizados:_
+
 `--name meli_postgres_with_sql`: Asigna un nombre al contenedor.
 
 `-e POSTGRES_PASSWORD=yourpassword`: Establece la contraseña para el usuario postgres (cámbiala por una contraseña segura).
