@@ -118,3 +118,13 @@ CREATE TABLE item_order (
   unit_price NUMERIC(34, 6) NOT NULL,
   PRIMARY KEY (order_id, item_id)
 );
+
+
+-- Tabla reprocesable, encargada de almacenar los datos del cierre del dia
+CREATE TABLE item_snapshot (
+  item_id INT NOT NULL,
+  snapshot_date DATE NOT NULL,
+  price NUMERIC(34, 6) NOT NULL,
+  status VARCHAR(20) NOT NULL,
+  PRIMARY KEY (item_id, snapshot_date)
+);
