@@ -2,7 +2,7 @@
 SELECT
   r.rol AS tipo_rol,
   dt.nickname AS tipo_documento,
-	c.document_number,
+  c.document_number,
   c.first_name,
   c.first_surname,
   c.birth_date,
