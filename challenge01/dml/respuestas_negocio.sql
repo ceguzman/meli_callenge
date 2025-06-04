@@ -1,4 +1,5 @@
 -- === respuesta_negocio 01 ===
+
 SELECT
 	r.rol AS tipo_rol,
 	dt.nickname AS tipo_documento,
