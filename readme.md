@@ -2,7 +2,8 @@
 
 __1. MER:__
 
-![image](https://github.com/user-attachments/assets/a61665c9-ef70-4cf2-bb32-0385a2c5f236)
+![EntityRelationshipDiagram1](https://github.com/user-attachments/assets/bd5c484e-ff19-4f93-8d9f-46ba9bba530b)
+
 ___
 
 __2. Respuestas de negocio:__
@@ -23,6 +24,27 @@ ___
 # Challenge 02
 
 __notas__:
+
+_Estructura del proyecto:_
+
+```
+├── challenge01
+│   ├── Dockerfile
+│   ├── ddl
+│   │   ├── create_tables.sql
+│   │   └── data.sql
+│   ├── dml
+│   │   └── respuestas_negocio.sql
+│   └── run.sh
+├── images
+│   ├── EntityRelationshipDiagram.jpg
+│   ├── respuesta_negocio01.png
+│   ├── respuesta_negocio02.png
+│   └── respuesta_negocio03.png
+└── readme.md
+```
+
+_Explicación basica de comandos docker utilizados:_
 
 `--name meli_postgres_with_sql`: Asigna un nombre al contenedor.
 
