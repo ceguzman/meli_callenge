@@ -1,11 +1,13 @@
-from meli.auth.oauth import get_access_token
+from meli.auth.oauth import OuathApi
+from meli.auth.config.constants import secrets
 
 
 def main():
-    token = get_access_token()
-    # results = search_items("chromecast", token)
-    # print(f"Found {len(results)} items.")
+    ouath_api = OuathApi(secrets=secrets)
+    token = ouath_api.get_access_token()
+
     print(token)
+
 
 if __name__ == "__main__":
     main()
