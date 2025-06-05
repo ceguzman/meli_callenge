@@ -7,18 +7,22 @@ class OuathApi:
     def __init__(self, secrets: dict):
         self.url = secrets['url']
         self.payload_auth = secrets['payload_auth']
-        self.payload_refresh_base = secrets['payload_auth']
+        self.payload_refresh_base = secrets['payload_refresh_base']
         self.headers = secrets['headers']
 
     def get_access_token(self):
-
         try:
             response = requests.post(self.url, data=self.payload_auth, headers=self.headers, timeout=10)
             response.raise_for_status() # Lanza excepción si el status code es 4xx o 5xx
             token_data = response.json()
-            return token_data.get("access_token")
+            return {
+                "access_token": token_data.get("access_token"),
+                "refresh_token": token_data.get("refresh_token"),
+                "expires_in": token_data.get("expires_in")
+            }
         except requests.exceptions.RequestException as e:
             return self._handle_request_exception(e)
+
 
     def refresh_access_token(self, refresh_token):
         payload = self.payload_refresh_base.copy()
