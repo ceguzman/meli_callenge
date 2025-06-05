@@ -21,4 +21,5 @@ def get_valid_access_token():
             update_env("REFRESH_TOKEN", tokens["refresh_token"])
             print("refresh_token saved to .env")
 
+    print(tokens)
     return tokens
