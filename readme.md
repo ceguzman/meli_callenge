@@ -34,7 +34,37 @@ _Estructura del proyecto:_
 │   │   ├── create_tables.sql
 │   │   └── data.sql
 │   ├── dml
-│   │   └── respuestas_negocio.sql
+│   │   └── business_answers.sql
+│   └── run.sh
+├── challenge02
+│   ├── credentials
+│   ├── meli
+│   │   ├── __init__.py
+│   │   ├── api
+│   │   │   ├── __init__.py
+│   │   │   └── mercado_libre
+│   │   │       ├── __init__.py
+│   │   │       └── items
+│   │   │           ├── __init__.py
+│   │   │           └── items.py
+│   │   ├── app.py
+│   │   ├── auth
+│   │   │   ├── __init__.py
+│   │   │   ├── config
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── constants.py
+│   │   │   └── oauth.py
+│   │   ├── config
+│   │   │   ├── __init__.py
+│   │   │   └── settings.py
+│   │   ├── services
+│   │   │   ├── __init__.py
+│   │   │   ├── items_service.py
+│   │   │   └── oauth_service.py
+│   │   └── utils
+│   │       ├── __init__.py
+│   │       └── env_writer.py
+│   ├── requirements.txt
 │   └── run.sh
 ├── images
 │   ├── EntityRelationshipDiagram.jpg
@@ -44,7 +74,24 @@ _Estructura del proyecto:_
 └── readme.md
 ```
 
-_Explicación basica de comandos docker utilizados:_
+# Challenge 02
+
+__1. Consumir el token:__
+
+Se realiza el consumo del token y refresh token de manera __exitosa__
+
+![image](https://github.com/user-attachments/assets/f20b6c78-e24c-48a1-b892-0bf9575b1813)
+
+
+__2. Concumir items:__
+
+Al momento de realizar la consulta por Items la Api responde error __403__ permisos no autorizados.
+Investigando un poco, encontre lo siguiente causa del error:
+
+_"Efectuamos la normalización de nuestras APIs para cumplir con las mejores prácticas en el uso de tokens de acceso, sin afectar las consultas individuales. Como parte del cambio, las consultas genéricas realizadas a través de la llamada "search" dejarán de funcionar. A partir de ahora, deben ser específicas del usuario con el que están trabajando"_
+
+
+### Explicación challenge01:
 
 `--name meli_postgres_with_sql`: Asigna un nombre al contenedor.
 
@@ -59,3 +106,25 @@ _Explicación basica de comandos docker utilizados:_
 ``` bash
 docker run --name meli_postgres_with_sql -e POSTGRES_PASSWORD=yourpassword -e POSTGRES_DB=meli_challenge -p 5432:5432 -d meli_postgres_with_sql
 ```
+
+Para realizar la ejecución deberá ejecutar el archivo __./run.sh__ que se encuentrá dentro de la carpeta challenge01.
+
+
+### Explicación challenge02:
+
+Para realizar la ejecución, debe agregar un arcivo __.env__ de la siguiente manera:
+
+``` bash
+export CLIENT_ID=
+export CLIENT_SECRET=
+export REDIRECT_URI=
+export AUTH_CODE=
+export REFRESH_TOKEN=
+```
+
+Deberas llenar la información, a partir de tu app de Mercado Libre, link doc:
+
+[Crear una aplicación en Mercado Libre](https://developers.mercadolibre.com.ar/es_ar/crea-una-aplicacion-en-mercado-libre-es)
+
+
+Una vez deligenciada deberá crear un ambiente virtual de python, instalar los requerimientos y ejecutar el archivo __./run.sh__ que se encuentra dentro de la carpeta de challengue02

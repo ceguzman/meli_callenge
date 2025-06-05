@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "meli.app",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/challenge02"  // 👈 Directorio base para ejecutar
+        }
+    ]
+}
