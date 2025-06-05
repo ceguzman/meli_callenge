@@ -80,6 +80,8 @@ __1. Consumir el token:__
 
 Se realiza el consumo del token y refresh token de manera __exitosa__
 
+![image](https://github.com/user-attachments/assets/f20b6c78-e24c-48a1-b892-0bf9575b1813)
+
 
 __2. Concumir items:__
 
